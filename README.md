@@ -11,7 +11,7 @@ This project shows the historical exchange rates for a specific currency.  It us
 ## Prerequisite
 Sign up to <strong>CurrencyScoop API</strong> in `https://currencyscoop.com`.  Then update the `API_KEY` in `.env` file.
 
-# API
+## API
 
 `GET /currencies` - retrieves the list of currencies.
 
