@@ -1,46 +1,28 @@
-# Getting Started with Create React App
+# Exchange Rates
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project shows the historical exchange rates for a specific currency.  It uses [Express](https://expressjs.com) for backend, and [React](https://reactjs.org) for frontend.  For ui components, it uses [Material-UI](https://material-ui.com/) for material design.
 
-## Available Scripts
+## Preview
 
-In the project directory, you can run:
+![Recipe Search Preview](preview_1.png)
 
-### `npm start`
+![Recipe Search Preview](preview_2.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Prerequisite
+Sign up to <strong>CurrencyScoop API</strong> in `https://currencyscoop.com`.  Then update the `API_KEY` in `.env` file.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# API
 
-### `npm test`
+`GET /currencies` - retrieves the list of currencies.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`GET /latest?base={base}` - retrieves the real-tiem exchange rates for the given `base` currency
 
-### `npm run build`
+`GET /historical?base={base}&currency={currency}&period={timePeriod}` -  retrieves the historical exchange rates for the given `base` currency, selected `currency`, and `timePeriod`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Run `npm install` to install the necessary packages.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Run
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Run `npm run start` to run the application.
