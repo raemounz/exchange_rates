@@ -15,7 +15,7 @@ Sign up to <strong>CurrencyScoop API</strong> in `https://currencyscoop.com`.  T
 
 `GET /currencies` - retrieves the list of currencies.
 
-`GET /latest?base={base}` - retrieves the real-tiem exchange rates for the given `base` currency
+`GET /latest?base={base}` - retrieves the real-time exchange rates for the given `base` currency
 
 `GET /historical?base={base}&currency={currency}&period={timePeriod}` -  retrieves the historical exchange rates for the given `base` currency, selected `currency`, and `timePeriod`.
 
