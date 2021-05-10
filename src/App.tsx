@@ -35,7 +35,7 @@ const App: React.FC = () => {
               <Rates baseCurrency={baseCurrency} />
             </Route>
             <Route path="/:ccy">
-              <History />
+              {currencies.length > 0 && <History baseCurrency={baseCurrency} />}
             </Route>
             <Route exact path="/" render={() => <Redirect to="/rates" />} />
           </Switch>

@@ -21,16 +21,18 @@ const Rates: React.FC<Props> = (props: Props) => {
     if (props.baseCurrency && currencies.length > 0) {
       setInProgress(true);
       mainService.getLatestRates(props.baseCurrency).then((response: any) => {
-        const latestRates = Object.keys(response.data).map((c: any) => {
-          const currency = currencies.find((ccy: any) => ccy.code === c);
-          return {
-            code: c,
-            name: currency?.name,
-            rate: response.data[c],
-            symbol: currencyToSymbolMap[c],
-            decimal: currency?.decimal,
-          };
-        });
+        const latestRates = Object.keys(response.data)
+          .filter((c: any) => currencies.find((ccy: any) => ccy.code === c))
+          .map((c: any) => {
+            const currency = currencies.find((ccy: any) => ccy.code === c);
+            return {
+              code: c,
+              name: currency?.name,
+              rate: response.data[c],
+              symbol: currencyToSymbolMap[c],
+              decimal: currency?.decimal,
+            };
+          });
         setRates(latestRates);
         setInProgress(false);
       });
@@ -54,7 +56,8 @@ const Rates: React.FC<Props> = (props: Props) => {
             <div>{rate.code}</div>
             <span style={{ flexGrow: 1 }}></span>
             <div>
-              {rate.rate.toFixed(rate.decimal)}&nbsp;&nbsp;{rate.symbol}
+              {rate.rate.toFixed(rate.decimal)}
+              {rate.symbol && `  ${rate.symbol}`}
             </div>
           </div>
           <span style={{ flexBasis: 10 }}></span>
