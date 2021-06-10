@@ -11,11 +11,11 @@ This project shows the historical exchange rates for a specific currency.  It us
 ## Prerequisite
 Sign up to <strong>CurrencyScoop API</strong> in `https://currencyscoop.com`.  Then update the `API_KEY` in `.env` file.
 
-# API
+## API
 
 `GET /currencies` - retrieves the list of currencies.
 
-`GET /latest?base={base}` - retrieves the real-tiem exchange rates for the given `base` currency
+`GET /latest?base={base}` - retrieves the real-time exchange rates for the given `base` currency
 
 `GET /historical?base={base}&currency={currency}&period={timePeriod}` -  retrieves the historical exchange rates for the given `base` currency, selected `currency`, and `timePeriod`.
 
