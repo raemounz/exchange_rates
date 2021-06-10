@@ -4,9 +4,9 @@ This project shows the historical exchange rates for a specific currency.  It us
 
 ## Preview
 
-![Recipe Search Preview](preview_1.png)
+![Exchange Rates Preview](preview_1.png)
 
-![Recipe Search Preview](preview_2.png)
+![Exchange Rates Preview](preview_2.png)
 
 ## Prerequisite
 Sign up to <strong>CurrencyScoop API</strong> in `https://currencyscoop.com`.  Then update the `API_KEY` in `.env` file.
